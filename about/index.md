@@ -14,9 +14,9 @@ Conditional/temporal fact extraction from massive text corpora with minimal huma
 I love reading and traveling.  
 I love listening and sharing.  
 
-I see myself as a data scientist.  
+I see myself as a data scientist after graduation.  
 A person can tell stories in data.  
-A person can help solving the real world's problems. 
+A person can help solve the real world's problems. 
 
 I see computer science as a tool.  
 A tool can be used to discover the knowledge of this world.  
