@@ -8,12 +8,12 @@ Hello! I am a 2nd year Ph.D student in <a rel="mjiang" href="http://www.meng-jia
 <strong>Research Interests</strong>: 
 Conditional/temporal fact extraction from massive text corpora with minimal human effort. For example: Given text documents (news, papers), can we extract (entity, attribute, value)-tuples, called EAV-tuples, and their conditions (e.g., from when to when, under what temperature)? 
 
-<strong>What's more</strong>: 
+<strong>What's more</strong>:  
 I love reading and traveling.  
 I love listening and sharing.  
 
-I see myself as a data scientist.
-A person can tell the story in data. 
+I see myself as a data scientist.  
+A person can tell the story in data.  
 A person can help solving the real world's problems. 
 
 I see computer science as a tool.  
