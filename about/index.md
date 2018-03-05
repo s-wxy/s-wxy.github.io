@@ -3,6 +3,10 @@ layout: page
 title: About
 ---
 
+<form method="get" action="./source/cv_xueying.pdf">
+   <button type="submit">CV</button>
+</form>
+
 Hello! I am a 2nd year Ph.D student in <a rel="mjiang" href="http://www.meng-jiang.com/">Dr.Meng Jiang</a>'s <a rel="dm2" href="http://www.meng-jiang.com/lab.html">Data Mining towards Decision Making (DM2) Lab</a> at <a rel="ndcse" href="http://cse.nd.edu/">CSE@Notre Dame</a>. I am currently serving as professional development chair in <a rel="ndswe" href="https://engineering.nd.edu/student-organizations/swe/gradswe">Notre Dame grad-Society of Women Engineers</a>. 
 
 <strong>Research Interests</strong>: 
