@@ -5,7 +5,7 @@ title: SWE 2015 TeamTech Competition
 
 *This is not a technical blog but one of the most wonderful experience I have in my life.*  
 
-For the 2015 Society of Women Engineers National Team Tech competition, I worked with 9 other students for 10 months on the CubeSat Payload Project, named <strong>"Eyes of the Tiger"</strong>>.   
+For the 2015 Society of Women Engineers National Team Tech competition, I worked with 9 other students for 10 months on the CubeSat Payload Project, named <strong>"Eyes of the Tiger"</strong>.   
 
 What is CubeSat? A CubeSat is a type of miniaturized satellite for space research which measures 10 cm on each side. CubeSats can have different sensors depending on their mission.  
 
