@@ -3,9 +3,7 @@ layout: page
 title: About
 ---
 
-<form method="get" action="./source/cv_xueying.pdf">
-   <button type="submit">CV</button>
-</form>
+<a href="./source/" download="cv_xueying.pdf">CV</a>
 
 Hello! I am a 2nd year Ph.D student in <a rel="mjiang" href="http://www.meng-jiang.com/">Dr.Meng Jiang</a>'s <a rel="dm2" href="http://www.meng-jiang.com/lab.html">Data Mining towards Decision Making (DM2) Lab</a> at <a rel="ndcse" href="http://cse.nd.edu/">CSE@Notre Dame</a>. I am currently serving as professional development chair in <a rel="ndswe" href="https://engineering.nd.edu/student-organizations/swe/gradswe">Notre Dame grad-Society of Women Engineers</a>. 
 
@@ -17,9 +15,9 @@ I love reading and traveling.
 I love listening and sharing.  
 
 I see myself as a data scientist.  
-A person can tell the story in data.  
+A person can tell stories in data.  
 A person can help solving the real world's problems. 
 
 I see computer science as a tool.  
-A tool can be used to discover the knowledge of this worls.  
+A tool can be used to discover the knowledge of this world.  
 A tool can illustrate the beauty of 1 and 0 from one to another. 
