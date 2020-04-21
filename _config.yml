@@ -1,13 +1,11 @@
-title: Xueying
-author: Aigars Dzerviniks
-description: It's simple. It's easy to use. It's a Jekyll theme.
+plugins:
+  - jekyll-paginate
 
-highlighter: null
-permalink: /:title
+title: Sweet 16
+description:
+    <a href="https://wordpress.org/themes/twentysixteen/" rel="external">Wordpress 2016 theme</a>
+    in <a href="https://jekyllrb.com/" rel="external">Jekyll</a>
 
-url:
-baseurl:
-
-# Custom options:
-# color_scheme: azul|ruby|amber|avocado
-# color_scheme: avocado
+paginate: 10
+paginate_path: /page/:num/
+permalink: /:title/

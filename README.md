@@ -1,40 +1,28 @@
-# brume
+Sweet 16
+========
+[Wordpress 2016 theme][2016] revives in Jekyll.
 
-I am not a designer so I cannot impress you with breathtaking Jekyll themes, but brume is something that just came to my mind and I had to build it. It is a clean and simple theme, which has an index page that lists all your blog posts divided by the year, a single post page and a layout for any additional pages you might need.
+This theme is for those who like the visual design of Wordpress but otherwise
+want a static site.
 
-This is how the "Home" page looks like.
+This theme is a reaction to content injection vulnerability in Wordpress 4.7.
+I've always liked the design of Wordpress default themes.  Wordpress is also
+good for muggles but too complex for me.  I've never thought that such
+complexity would cause problem until a random French guy injected a spam
+article.
 
-![Home](https://raw.githubusercontent.com/aigarsdz/brume/master/screenshots/home.png)
+Customization
+-------------
+Customization is welcome since developers' and writers' files are somewhat
+separated.  The only underscored paths writers touch are `_data` and `_posts`.
 
-And this is a single post.
+Differences from [2016, the reference theme][2016] are considered bugs although
+some of them are impossible to fix due to the nature of Jekyll.  Bravely file
+bugs or make pull requests to make this theme more close to the reference
+theme.
 
-![Post](https://raw.githubusercontent.com/aigarsdz/brume/master/screenshots/post_1.png)
+License
+-------
+GPL because this theme is a derivative from Wordpress.
 
-![Post. More content examples.](https://raw.githubusercontent.com/aigarsdz/brume/master/screenshots/post_2.png)
-
-## Usage
-
-Brume can be installed just like any other Jekyll theme as described [here](https://jekyllrb.com/docs/themes/#installing-a-theme),
-but there are a couple of additional steps you have to take.
-
-1. All the links are defined in a file *_data/links.yml*, therefore you'll have to create a *_data*
-directory and put this file there in order for navigation to be displayed.
-2. Brume uses `home` layout for the home page (like the default Jekyll theme). All you need to do
-is create an *index.html* or *index.md* file with `layout: home`. If you want the home page to be
-listed in the navigation you have to add `title` to it's front matter that matches
-the title you used for the home page link in the *links.yml* file. Titles are used to indicate
-the current page.
-
-## Theme customization
-
-This theme has 4 predefined colors that can be used for links:
-
-- azul
-- ruby
-- amber
-- avocado
-
-By default it uses *avocado*, but if you want to select another one just change the `color_scheme` setting in
-*_config.yml* file.
-
-Express your thoughts about brume on Twitter [@aigarsdz](http://twitter.com/aigarsdz), and help me make it better!
+[2016]: https://wordpress.org/themes/twentysixteen/
