@@ -7,13 +7,13 @@ title: About
 About me
 --------
 <!-- change the picture here -->
-<!-- <div id="avatar">
+<div id="avatar">
 <a href="../favicon.ico">
-<img alt="Chen-Pang He" width="200" height="200"
+<img alt="yo" width="200" height="200"
 	src="../favicon.ico"
 	srcset="../favicon.ico 2x">
 </a>
-</div> -->
+</div>
 
 haha
 

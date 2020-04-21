@@ -2,15 +2,15 @@
 #   href: https://jdh8.org/
 - title: About
   href: /about/
-- title: Tools
-  href: /tools/
-  children:
-    - title: Asm.js minifier
-      href: /tools/asm-js-minifier/
-    - title: Primality test
-      href: /tools/prime/
-    - title: Whiteboard
-      href: /tools/whiteboard/
+# - title: Tools
+#   href: /tools/
+#   children:
+#     - title: Asm.js minifier
+#       href: /tools/asm-js-minifier/
+#     - title: Primality test
+#       href: /tools/prime/
+#     - title: Whiteboard
+#       href: /tools/whiteboard/
 - title: Coding
   href: /Coding/
   children:
