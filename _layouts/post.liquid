@@ -10,8 +10,8 @@ layout: default
 		<footer>
 			{% if author.hash %}
 				<img class="gravatar" alt="" width="42" height="42"
-					src="https://www.gravatar.com/avatar/{{ author.hash }}?s=42&amp;d=identicon"
-					srcset="https://www.gravatar.com/avatar/{{ author.hash }}?s=84&amp;d=identicon 2x">
+					src="../favicon.ico"
+					srcset="../favicon.ico 2x">
 			{% endif %}
 			{% if author.name %}
 				<section>
@@ -24,8 +24,8 @@ layout: default
 	<footer>
 		{% if author.hash %}
 			<img class="gravatar" alt="" width="49" height="49"
-				src="https://www.gravatar.com/avatar/{{ author.hash }}?s=49&amp;d=identicon"
-				srcset="https://www.gravatar.com/avatar/{{ author.hash }}?s=98&amp;d=identicon 2x">
+				src="../favicon.ico"
+				srcset="../favicon.ico 2x">
 		{% endif %}
 		<div>{{ author.name }}</div>
 		<div><time>{{ page.date | date: "%F" }}</time></div>

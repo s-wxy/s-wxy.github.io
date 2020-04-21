@@ -7,13 +7,13 @@ title: About
 About me
 --------
 <!-- change the picture here -->
-<div id="avatar">
+<!-- <div id="avatar">
 <a href="../favicon.ico">
 <img alt="Chen-Pang He" width="200" height="200"
 	src="../favicon.ico"
 	srcset="../favicon.ico 2x">
 </a>
-</div>
+</div> -->
 
 haha
 
@@ -29,7 +29,7 @@ haha
 \[Animation of my avatar is from [Lea Verou][Lea].  Hers is generated
 dynamically, mine hardcoded.\]
 </small> -->
-<!-- 
+<!--
 [CK]: https://web.ck.tp.edu.tw/
 [Cxx]: https://zh.wikipedia.org/wiki/C%2B%2B
 [Eigen]: http://eigen.tuxfamily.org/index.php?title=Main_Page
