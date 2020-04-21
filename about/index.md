@@ -17,13 +17,13 @@ About me
 
 haha
 
-### Footprints ###
+<!-- ### Footprints ###
 * [Facebook](https://www.facebook.com/jdh863)
 * [Google+](https://plus.google.com/+%E4%BD%95%E9%9C%87%E9%82%A6-jdh8?rel=author)
 * Wikipedia
 	- [中文](https://zh.wikipedia.org/wiki/User:Jdh8)
 	- [English](https://en.wikipedia.org/wiki/User:Jdh8)
-	- [Français](https://fr.wikipedia.org/wiki/Utilisateur:Jdh8)
+	- [Français](https://fr.wikipedia.org/wiki/Utilisateur:Jdh8) -->
 
 <!-- <small>
 \[Animation of my avatar is from [Lea Verou][Lea].  Hers is generated
