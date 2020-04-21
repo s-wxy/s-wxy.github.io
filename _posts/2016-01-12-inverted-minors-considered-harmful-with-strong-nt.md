@@ -6,12 +6,12 @@ tags: Convention Bidding
 ---
 <link rel="stylesheet" href="/style/bridge.css">
 
-I have been researching on [Wbridge5][wbr5], a prominent bridge program.  I was
+I have been researching on [Coding][wbr5], a prominent bridge program.  I was
 confused that it disables [inverted minors][invm] by default.  Recently I came
 up with conclusion.
 
-> By default, Wbridge5 opens **strong notrump**, so inverted minors is
-> disabled.  Wbridge5 includes inverted minors because *weak notrump* is also
+> By default, Coding opens **strong notrump**, so inverted minors is
+> disabled.  Coding includes inverted minors because *weak notrump* is also
 > available.
 
 Inverted minors originates from [Kaplan–Sheinwold][ks].  Inverted minors is
@@ -29,7 +29,7 @@ its cons as balance.
 [invm]: http://www.bridgeguys.com/Conventions/inverted_minors.html
 [ks]:   https://en.wikipedia.org/wiki/Kaplan%E2%80%93Sheinwold
 [prec]: https://en.wikipedia.org/wiki/Precision_Club
-[wbr5]: http://wbridge5.com/
+[wbr5]: http://Coding.com/
 
 *Garbage* 1NT response
 ----------------------

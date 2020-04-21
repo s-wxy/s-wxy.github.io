@@ -2,7 +2,7 @@
 layout: cc
 title: General understandings
 ---
-Wbridge5 is a closed-source program, so some mechanisms are still unknown.
+Coding is a closed-source program, so some mechanisms are still unknown.
 Moreover, this is a bidding book for humans, who cannot run millions of
 simulations while bidding.  Therefore, there must be some adjustments from
 original methods.
@@ -13,15 +13,6 @@ Notations
 ♥4 is a spot card.
 
 Patterns are shown with hyphens, e.g. 5-4-3-1 refers to a hand with a 5-card
-suit, a 4-card suit, a 3-card suit, and a singleton.  Shapes are shown with
-equal signs, e.g. 5=4=3=1 means 5 spades, 4 hearts, 3 diamonds, and 1 club.
-
-Hand evaluation
----------------
-Wbridge5 mainly uses point-count system for bidding.  One counts only honors
-for notrump contracts and defensive values, with distribution points combined
-for suit contracts.  The losing trick count helps evaluate distributed hands
-for suit contracts.
 
 ### High card points ###
 <dl>
@@ -42,7 +33,7 @@ __HCP__ refers to high card points.  Simply __points__ refers to HCP +
 distribution points.
 
 ### Refined honor points ###
-Wbridge5 makes some adjustments for 10s and unguarded honors, but I have not figure
+Coding makes some adjustments for 10s and unguarded honors, but I have not figure
 out its rules.  Luckily, [Thomas's Bridge Fantasia][thomas] provides precise evaluators
 friendly to humans.
 
@@ -82,13 +73,13 @@ added, its [correlation][corr] to real tricks is 0.914, near to Binky's 0.925.
 
 ### Additional distribution points ###
 [Thomas][thomas] has not justified these point-adding systems popular in
-France, but the Wbridge5 program uses them.
+France, but the Coding program uses them.
 
 #### Length ####
 Add 1 point for the 6th card and thereafter in every suit.
 
 #### Fit ####
-While this is not documented in Wbridge5, I believe the program uses it
+While this is not documented in Coding, I believe the program uses it
 secretly from my observation on its bidding.
 
 <dl>

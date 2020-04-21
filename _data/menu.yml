@@ -11,14 +11,8 @@
       href: /tools/prime/
     - title: Whiteboard
       href: /tools/whiteboard/
-- title: Wbridge5
-  href: /wbridge5/
+- title: Coding
+  href: /Coding/
   children:
     - title: General understandings
-      href: /wbridge5/general/
-    - title: Partnership bidding
-      href: /wbridge5/partnership/
-    - title: Competitive bidding
-      href: /wbridge5/compentitive/
-    - title: Defensive bidding
-      href: /wbridge5/defensive/
+      href: /Coding/general/
