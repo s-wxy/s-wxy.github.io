@@ -9,7 +9,7 @@
 		<givenName xml:lang="zh-Latn">Chen-Pang</givenName>
 		<mbox_sha1sum>17ab6f6d888741a35dd58b895c9e1b200668460f</mbox_sha1sum>
 		<mbox_sha1sum>9288e00d54e69a37d8c0a598bc377774e9f68b3a</mbox_sha1sum>
-		<thumbnail rdf:resource="https://www.gravatar.com/avatar/a28b050d0206b3d418551203ddd83cba" />
+		<thumbnail rdf:resource="../favicon.ico" />
 		<weblog rdf:resource="https://jdh8.org/" />
 		<weblog rdf:resource="/" />
 		<currentProject rdf:resource="http://eigen.tuxfamily.org/" />
