@@ -1,8 +1,8 @@
 plugins:
   - jekyll-paginate
 
-title: Integration by me
-description: Then you will know the truth, and the truth will set you free.
+title: Yo's Memo
+description: Good morning. Good afternoon. Goor evening. Good night. 
 paginate: 10
 paginate_path: /page/:num/
 permalink: /:title/
