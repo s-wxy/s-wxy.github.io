@@ -6,22 +6,16 @@ title: About
 
 About me
 --------
+<!-- change the picture here -->
 <div id="avatar">
-<a href="https://www.gravatar.com/avatar/a28b050d0206b3d418551203ddd83cba?s=800">
+<a href="../favicon.ico">
 <img alt="Chen-Pang He" width="200" height="200"
-	src="https://www.gravatar.com/avatar/a28b050d0206b3d418551203ddd83cba?s=200"
-	srcset="https://www.gravatar.com/avatar/a28b050d0206b3d418551203ddd83cba?s=400 2x">
+	src="../favicon.ico"
+	srcset="../favicon.ico 2x">
 </a>
 </div>
 
-I am [**Chen-Pang He**][SearchEn] ([**何震邦**][SearchZh]), M.D.,
-[Taipei Medical University][TMU].
-
-I started writing [web pages][HTML] since 2000 and fell in love with [C++][Cxx]
-in [high school][CK].  I tried to make some software of [numerical linear
-algebra][NumLinAlg] on my own, but aborted upon meeting [Eigen][Eigen] and
-improved its modules of [matrix function][MatF] and of [Kronecker
-product][KroneckerProd].
+haha
 
 ### Footprints ###
 * [Facebook](https://www.facebook.com/jdh863)
