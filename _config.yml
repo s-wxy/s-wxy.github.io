@@ -2,7 +2,7 @@ plugins:
   - jekyll-paginate
 
 title: Yo's Memo
-description: “I had, however, already a different ideal, derived, I suppose, from mathematics."
+description: “change - I had, however, already a different ideal, derived, I suppose, from mathematics."
 paginate: 10
 paginate_path: /page/:num/
 permalink: /:title/
