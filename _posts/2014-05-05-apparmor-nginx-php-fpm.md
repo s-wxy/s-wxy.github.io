@@ -41,18 +41,7 @@ The following is config for nginx.
 
 		capability dac_override,
 		capability net_bind_service,
-		capability setgid,
-		capability setuid,
 
-		/etc/nginx/** r,
-		/etc/ssl/openssl.cnf r,
-		/proc/*/auxv r,
-		/run/nginx.pid rw,
-		/run/nginx.pid.oldbin w,
-		/run/php5-fpm.sock rw,
-		/srv/www/** r,
-		/usr/sbin/nginx mr,
-		/var/log/nginx/* w,
 	}
 
 The following is config for php-fpm.
@@ -68,19 +57,5 @@ The following is config for php-fpm.
 		capability setgid,
 		capability setuid,
 
-		/etc/php5/** r,
-		/proc/*/auxv r,
-		/proc/sys/kernel/ngroups_max r,
-		/run/mysqld/mysqld.sock rw,
-		/run/php5-fpm.pid rw,
-		/run/php5-fpm.sock w,
-		/srv/www/** r,
-		/srv/www/html/wp-content/** rw,
-		/srv/www/html/wp-content/cache/** rwk,
-		/srv/www/magento/media/** rw,
-		/srv/www/magento/var/** rwk,
-		/tmp/ r,
-		/tmp/** rwk,
-		/usr/sbin/php5-fpm mrix,
-		/var/log/php5-fpm.log* w,
+
 	}
