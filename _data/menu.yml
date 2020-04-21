@@ -9,8 +9,8 @@
 #       href: /tools/prime/
 #     - title: Whiteboard
 #       href: /tools/whiteboard/
-- title: Coding
-  href: /Coding/
-  children:
-    - title: General understandings
-      href: /Coding/general/
+# - title: Coding
+#   href: /Coding/
+#   children:
+#     - title: General understandings
+#       href: /Coding/general/
