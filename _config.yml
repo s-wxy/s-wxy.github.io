@@ -11,4 +11,4 @@ defaults:
   - scope:
         path: ""
     values:
-        author: jdh8
+        author: Yo

@@ -6,6 +6,17 @@ title: About
 
 About me
 --------
+Hi! I am on my way to become a data scientist.
+Wish you could find something interesting here :)
+
+About this site
+---------------
+This site is primarily about data science and computer science.
+Maybe will include some travel notes in the future.
+If you have any questions about the content, please feel free to contact.
+
+
+
 <!-- change the picture here -->
 <!-- <div id="avatar">
 <a href="../favicon.ico">
