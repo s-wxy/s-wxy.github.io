@@ -5,11 +5,9 @@ title: About
 <link rel="stylesheet" href="style.css">
 
 
-About this site
----------------
-Hi! I am on my way to become a real data scientist, and would love to share with you my study notes. 
-Wish you could find something interesting here :)
-If you have any questions about the content, please feel free to contact.
+
+Wish you find something interesting :)
+
 
 
 
