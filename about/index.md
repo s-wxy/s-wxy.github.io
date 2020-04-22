@@ -4,15 +4,11 @@ title: About
 ---
 <link rel="stylesheet" href="style.css">
 
-About me
---------
-Hi! I am on my way to become a data scientist.
-Wish you could find something interesting here :)
 
 About this site
 ---------------
-This site is primarily about data science and computer science.
-Maybe will include some travel notes in the future.
+Hi! I am on my way to become a real data scientist, and would love to share with you my study notes. 
+Wish you could find something interesting here :)
 If you have any questions about the content, please feel free to contact.
 
 
