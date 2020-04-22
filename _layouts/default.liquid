@@ -60,7 +60,7 @@
 		<section>
 			<h2>Recent posts</h2>
 			<ul>
-				{% for post in site.posts limit: 8 %}
+				{% for post in site.posts limit: 6 %}
 					<li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
 				{% endfor %}
 			</ul>

@@ -48,16 +48,6 @@ When partner opens 1♠, 1<span class="redsuit">♥</span>, or
 
 If inverted minors is agreed, without intervention, garbage 1NT is always on.
 
-If inverted minors is *off*, a constructive 1NT is ensured over 1♣ opening even
-if intervened, as there is always a better call <small>i.e. a suit or
-pass</small>.  Respond 2♣ with a weak 3-3-3-4 because the opener often has 4+
-clubs.
-
-If 1♣ ensures 3+ clubs
-: With minimum strength, the probability of only 3 clubs is 21.5%.
-
-If 1♣ can be 4-4-3-2
-: With minimum strength, the probability of exactly 3 clubs is 20.4%, 4-4-3-2 5.19%.
 
 ### Weak 4-card support dumped as garbage ###
 Express 5-card support at 3 level preempts, but 1NT with 4-card support is much
