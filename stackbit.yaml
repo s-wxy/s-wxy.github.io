@@ -148,18 +148,18 @@ models:
                   name: permalink
                   label: Permalink
                   required: true
-      - type: string
-        name: tag_page_dir
-        label: Tag Page Directory
-        description: The destination of the tag page.
-      - type: string
-        name: tag_page_layout
-        label: Tag Page Layout
-        description: The tag page layout.
-      - type: string
-        name: tag_permalink_style
-        label: Tag Permalink Style
-        description: The tag permalink style.
+      # - type: string
+      #   name: tag_page_dir
+      #   label: Tag Page Directory
+      #   description: The destination of the tag page.
+      # - type: string
+      #   name: tag_page_layout
+      #   label: Tag Page Layout
+      #   description: The tag page layout.
+      # - type: string
+      #   name: tag_permalink_style
+      #   label: Tag Permalink Style
+      #   description: The tag permalink style.
       - type: list
         name: include
         label: Include
