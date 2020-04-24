@@ -2,7 +2,7 @@
 layout: post
 title: AppArmor configuration for nginx and php-fpm
 categories: Linux
-tags: Ubuntu SQL
+tags: Ubu SQL
 ---
 [AppArmor][AppArmor] is the default
 [<abbr title="mandatory access control">MAC</abbr>][MAC]
