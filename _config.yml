@@ -3,7 +3,7 @@ logo: "favicon.ico"
 # logo: "images/logo.svg" # You can add own logo image.
 description: Minimalistic Theme for Jekyll
 baseurl: "" # The subpath of your site, e.g. /blog
-url: "http://s-wxy.github.io" # The base hostname & protocol for your site, e.g. http://example.com
+url: "https://s-wxy.github.io" # The base hostname & protocol for your site, e.g. http://example.com
 
 # Author Settings
 author:
