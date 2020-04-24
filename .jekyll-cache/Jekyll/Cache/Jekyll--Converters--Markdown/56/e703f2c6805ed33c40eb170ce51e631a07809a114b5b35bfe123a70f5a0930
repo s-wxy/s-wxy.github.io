@@ -1,0 +1,80 @@
+I"–<h3 id="176-second-highest-salary">176. Second Highest Salary</h3>
+
+<p>Write a SQL query to get the second highest salary from the <strong>Employee</strong> table.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Salary</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>100</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>200</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>300</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>For example, given the above Employee table, the query should return <strong>200</strong> as
+the second highest salary. If there is no second highest salary, then the query
+should return <strong>null</strong>.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>SecondHighestSalary</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>200</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="solution">Solution</h4>
+<pre><code class="language-SQL">SELECT
+IFNULL(
+(SELECT DISTINCT Salary
+ FROM Employee
+ ORDER BY Salary DESC
+ LIMIT 1 OFFSET 1
+),null) AS SecondHighestSalary;
+</code></pre>
+
+<h3 id="177-nth-highest-salary">177. Nth Highest Salary</h3>
+
+<p>Write a SQL query to get the nth highest salary from the Employee table.
+For example, given the above Employee table, the nth highest salary where n = 2 is 200.
+If there is no nth highest salary, then the query should return null.</p>
+
+<h4 id="solution-1">Solution</h4>
+<pre><code class="language-SQL">CREATE FUNCTION getNthHighestSalary(N INT) RETURNS INT
+BEGIN
+    SET N = N-1;
+RETURN(
+  SELECT DISTINCT Salary
+	FROM Employee
+	ORDER BY Salary DESC
+  LIMIT 1 OFFSET N
+  );
+END
+</code></pre>
+
+<h3 id="highlights">Highlights</h3>
+<ul>
+  <li>LIMIT</li>
+  <li>OFFSET</li>
+  <li>IFNULL</li>
+</ul>
+:ET

@@ -1,0 +1,236 @@
+I":<h3 id="597-overall-acceptance-rate">597. Overall Acceptance Rate</h3>
+
+<p>In social network like Facebook or Twitter, people send friend requests and
+accept others’ requests as well. Now given two tables as below:</p>
+
+<p><strong>Table</strong>: friend_request</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>sender_id</th>
+      <th>send_to_id</th>
+      <th>request_date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>2</td>
+      <td>2016-06-01</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>3</td>
+      <td>2016-06-01</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>4</td>
+      <td>2016-06-01</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>3</td>
+      <td>2016-06-02</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>4</td>
+      <td>2016-06-09</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Table</strong>: request_accepted</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>requester_id</th>
+      <th>accepter_id</th>
+      <th>request_date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>2</td>
+      <td>2016-06-03</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>3</td>
+      <td>2016-06-08</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>3</td>
+      <td>2016-06-08</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>4</td>
+      <td>2016-06-09</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>4</td>
+      <td>2016-06-10</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Write a query to find the overall acceptance rate of requests rounded to <strong>2 decimals</strong>,
+which is the number of acceptance divide the number of requests.
+For the sample data above, your query should return the following result.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>accept_rate</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0.80</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="analysis">Analysis</h4>
+<p>To solve this problem, we need:</p>
+<ul>
+  <li>accept_rate = number of acceptance/ number of requests</li>
+  <li>rounded to 2 decimals</li>
+</ul>
+
+<p>Break this problem into 4 steps:</p>
+<ul>
+  <li>Get the unique number of requests -&gt; unique (sender_id, send_to_id) pair</li>
+  <li>Get the unique number of acceptance -&gt; unique (requester_id, accepter_id) pair</li>
+  <li>Calculate the accept rate and rounded to 2 decimals</li>
+  <li>Add IFNULL for edge case</li>
+</ul>
+
+<h4 id="solution">Solution</h4>
+<pre><code class="language-SQL">SELECT
+ROUND(
+  IFNULL(
+  (SELECT COUNT(DISTINCT(requester_id, accepter_id))
+   FROM friend_request)
+  /
+  (SELECT COUNT(DISTINCT(sender_id, send_to_id))
+   FROM request_accepted)
+   ,0)
+,2)AS accept_rate
+</code></pre>
+
+<h3 id="602-who-has-the-most-friends">602. Who Has the Most Friends</h3>
+
+<p>Table <strong>request_accepted</strong> holds the data of friend acceptance.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>requester_id</th>
+      <th>accepter_id</th>
+      <th>request_date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>2</td>
+      <td>2016-06-03</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>3</td>
+      <td>2016-06-08</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>3</td>
+      <td>2016-06-08</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>4</td>
+      <td>2016-06-09</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Write a query to find the the people who has most friends and the most friends number under the following rules:</p>
+
+<ul>
+  <li>It is guaranteed there is only 1 people having the most friends.</li>
+  <li>The friend request could only been accepted once, which mean there is no multiple records with the same requester_id and accepter_id value.</li>
+</ul>
+
+<p>For the sample data above, the result is:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>num</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>3</td>
+      <td>3</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="analysis-1">Analysis</h4>
+<p>The table is slightly different compared to the first question. Based on tule 2,
+there is no multiple records with the same requester_id and accepter_id value.</p>
+
+<p>We break this problem into 2 steps:</p>
+<ul>
+  <li>Find the number of friends for each person: id, num_friends</li>
+  <li>Find the person with the most number of friends</li>
+</ul>
+
+<p>The second step is easy to do, so let’s take a look at the first one.
+Using <strong>id 3</strong> as example: we find id 3 has friend 4, when id 3 acting as a requester.
+id 3 also has friend 1 and 2 when acting as a accepter.</p>
+
+<p>So, we can have the following observation:</p>
+<ul>
+  <li>The number of friend of each person = The number of occurrences of that person in the table
+In order to do that, we want to put column <strong>requester_id</strong> and column <strong>accepter_id</strong> into one column
+then compute the count.</li>
+</ul>
+
+<h4 id="solution-1">Solution</h4>
+<pre><code class="language-SQL">SELECT ids AS id, count AS num
+FROM
+  (
+  SELECT ids, COUNT(*) AS count
+  FROM
+    (
+    SELECT requester_id AS ids FROM request_accepted
+    UNION ALL
+    SELECT accepter_id AS ids FROM request_accepted
+    ) AS T1
+  GROUP BY ids) AS T2
+ORDER BY cnt DESC
+LIMIT 1;
+</code></pre>
+<p>Below is a sample image
+<img src="/static/img/sample.png" alt="" /></p>
+
+<p>Another example of inserting image
+<img src="/static/img/sample.png" alt="Markdown Monster icon" style="float: left; margin-right: 20px;" /></p>
+
+<h3 id="highlights">Highlights</h3>
+<ul>
+  <li>UNION ALL</li>
+  <li>GROUP BY</li>
+</ul>
+:ET
