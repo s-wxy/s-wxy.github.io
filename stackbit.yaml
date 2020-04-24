@@ -1,6 +1,6 @@
 stackbitVersion: "~0.2.0"
 ssgName: jekyll
-buildCommand: "bundle install && bundle exec jekyll build" 
+buildCommand: "bundle install && bundle exec jekyll build"
 staticDir: ""
 uploadDir: images
 publishDir: "_site"
@@ -43,6 +43,10 @@ models:
             name: bio
             label: Bio
             description: The short bio of the author.
+      - type: string
+        name: linkedin
+        label: LinkedIn
+        description: Your LinkedIn url.
       - type: string
         name: twitter
         label: Twitter

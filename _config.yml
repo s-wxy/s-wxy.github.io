@@ -6,20 +6,21 @@ url: "" # The base hostname & protocol for your site, e.g. http://example.com
 
 # Author Settings
 author:
-  name: Sasha Levi
-  bio: Hi, my name is Sasha Levi. I like being at the center of events, being free and enjoying every moment. Thank you for visiting my blog.
+  name: Serene Wang
+  bio: Thank you for visiting my blog, wish you find something interesting.
 
 # Contact links
-twitter: https://twitter.com/ # Add your Twitter handle
-facebook: https://facebook.com/ # Add your Facebook handle
-dribbble: https://dribbble.com/ # Add your Dribbble handle
-instagram: https://instagram.com/ # Add your Instagram handle
-pinterest: https://pinterest.com/ # Add your Pinterest handle
-email: forexample@website.com # Add your Email address
+linkedin: https://www.linkedin.com/in/xueyingwang16/
+# twitter: https://twitter.com/ # Add your Twitter handle
+# facebook: https://facebook.com/ # Add your Facebook handle
+# dribbble: https://dribbble.com/ # Add your Dribbble handle
+# instagram: https://instagram.com/ # Add your Instagram handle
+# pinterest: https://pinterest.com/ # Add your Pinterest handle
+# email: forexample@website.com # Add your Email address
 
 # Hero Section
 hero: true # To enable the section hero, use the value true. To turn off use the value false.
-hero-title: Raked Minimalistic Theme # Add your hero title
+hero-title: Yo's Memo # Add your hero title
 hero-subtitle: For those who love simplicity # Add your hero subtitle
 hero-image: images/14.jpg # Add background image in section hero
 
