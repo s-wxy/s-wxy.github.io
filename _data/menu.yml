@@ -1,5 +1,8 @@
 - title: Readings
   herf: /Readings/
+  children:
+    - title: The Product Book
+      herf: /Readings/the-product-book/
 
 - title: About
   href: /about/
