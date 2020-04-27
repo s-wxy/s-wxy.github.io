@@ -11,7 +11,7 @@ author:
   bio: Thank you for visiting my blog, wish you find something interesting.
 
 # Contact links
-linkedin: https://www.linkedin.com/in/xueyingwang16/
+# linkedin: https://www.linkedin.com/in/xueyingwang16/
 # twitter: https://twitter.com/ # Add your Twitter handle
 # facebook: https://facebook.com/ # Add your Facebook handle
 # dribbble: https://dribbble.com/ # Add your Dribbble handle
@@ -22,7 +22,7 @@ email: wxy_16@yahoo.com # Add your Email address
 # Hero Section
 hero: true # To enable the section hero, use the value true. To turn off use the value false.
 hero-title: Yo's Memo # Add your hero title
-hero-subtitle: For those who love simplicity # Add your hero subtitle
+hero-subtitle: Wish you find something interesting # Add your hero subtitle
 hero-image: images/14.jpg # Add background image in section hero
 
 # Footer
