@@ -43,7 +43,7 @@ permalink: pretty
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
-  - jekyll/tagging
+  # - jekyll/tagging
 
 paginate: 4
 paginate_path: "/page/:num"
