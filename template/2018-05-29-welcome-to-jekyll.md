@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  template
 date:   2018-05-29
 image:  images/02.jpg
 tags:   [Jekyll]

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  The Force is strong with this one. I have you now
+title:  template
 date:   2018-11-09
 image:  images/06.jpg
 tags:   [Life]
