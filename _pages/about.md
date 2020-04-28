@@ -2,11 +2,9 @@
 layout: page
 title: About
 permalink: /about/
-image: images/01.jpg
+image: images/13.jpg
 ---
 
-Hi, my name is Sasha Levi.
-
-#### Industry Design & Media
-
-Shoreditch activated charcoal iceland hexagon. 
+>The world is full of magical things patiently waiting for our wits to grow sharper.
+>
+><cite>Bertrand Russell</cite>
