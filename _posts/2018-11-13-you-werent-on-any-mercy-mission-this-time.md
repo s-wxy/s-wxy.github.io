@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  You weren't on any mercy mission this time
+title:  template
 date:   2018-11-13
 image:  images/02.jpg
 tags:   [Work]

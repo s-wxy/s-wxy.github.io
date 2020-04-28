@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  All I've got to do is pass as an ordinary human
+title:  template
 date:   2018-11-12
 image:  images/03.jpg
 tags:   [Travels]
