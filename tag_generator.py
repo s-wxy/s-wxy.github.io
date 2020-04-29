@@ -26,7 +26,7 @@ for filename in filenames:
         if crawl:
             current_tags = line.strip().split(':')
             if current_tags[0] == 'tags':
-                total_tags.extend(current_tags[1].strip('[] ').split())
+                total_tags.extend(current_tags[1].strip('[] ').split(','))
                 crawl = False
                 break
         if line.strip() == '---':
@@ -41,7 +41,7 @@ total_tags = set(total_tags)
 old_tags = glob.glob(tag_dir + '*.md')
 for tag in old_tags:
     os.remove(tag)
-    
+
 if not os.path.exists(tag_dir):
     os.makedirs(tag_dir)
 
