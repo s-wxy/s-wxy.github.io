@@ -22,7 +22,7 @@ tags: [PySpark]
 
 #### Convert to TimestampType ####
 The data type of time information can be StringType sometimes.
-When we want to convert it to TimestampType, we should be careful of the output **format** we given in the code.
+When we convert it to TimestampType, we should be careful of the output **format** given in the code.
 We could get **null** like this:
 
 | Id |       reviewTime      | reviewTime_timestamp |
