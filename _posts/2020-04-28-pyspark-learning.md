@@ -11,6 +11,7 @@ tags: [PySpark]
 * How to get the Year, Month, Day values from the time field?
 
 ##### Sample Input #####
+
 | Id |       reviewTime      |
 |:--:|:---------------------:|
 |  1 | 11/22/2015 7:42:51 PM |
@@ -44,7 +45,7 @@ from pyspark.sql import functions as sf
 
 df1 = (df.withColumn("reviewTime_timestamp",
        sf.to_timestamp(sf.col("reviewTime"), format='MM/dd/yyyy HH:mm'))
-      )
+)
 
 {% endhighlight %}
 
