@@ -34,9 +34,9 @@ We could get **null** like this:
 Few things we need to pay attention to when giving the format:
 
 * Match the data!
-* The pattern for 24 hour format is **HH**, **hh** is for am./pm.
-* **S** for millisecond and **X** for timezone:
-* Spark >= 2.2, we can use **to_timestamp**, otherwise we can use **unix_timestamp**
+* The pattern for 24 hour format is **HH**, **hh** is for am./pm
+* **S** for millisecond, **X** for timezone
+* Spark >= 2.2, use **to_timestamp**, otherwise use **unix_timestamp**
 
 ##### Solution #####
 
