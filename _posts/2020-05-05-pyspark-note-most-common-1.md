@@ -42,7 +42,7 @@ For the example problem, for each **Id**, we want to find its most common **Prod
 So the **col_name = Product**. We can break down our question into steps:
 1. Select the corresponding columns from dataset
 2. Calculate the frequency of each value in the given column: (ID,product),count
-3. Using **windonw** function get the most common value (sort “count” in descending order and get the first row)
+3. Using **Window** functions get the most common value (sort “count” in descending order and get the first row)
 
 ##### Solution #####
 
@@ -51,23 +51,24 @@ from pyspark.sql import functions as sf
 from pyspark.sql import Window
 
 def find_most_common(df,col_name):
-  df1 = df.select(["ID",col_name])
-  frequency_count = (df1.groupby(["ID",col_name]).count()
-                       .where(sf.col(col_name).isNotNull())
-  )
+    # Select columns and calculate frequency
+    df1 = df.select(["ID",col_name])
+    frequency_count = (df1.groupby(["ID",col_name]).count()
+                         .where(sf.col(col_name).isNotNull())
+    )
+    # Apply Window functions, sort, get the most common value
+    window = Window.partitionBy("ID").orderBy(sf.desc("count"))
+    most_common = (frequency_count.withColumn("_rn",sf.row_number()
+                        .over(window)).where(sf.col("_rn")==1).drop("_rn")
+    )
 
-  window = Window.partitionBy("ID").orderBy(sf.desc("count"))
-  most_common = (frequency_count.withColumn("_rn",sf.row_number()
-                      .over(window)).where(sf.col("_rn")==1).drop("_rn")
-  )
+    most_common = most_common.select(
+                        sf.col(""),
+                        sf.col(col_name).alias("MostCommon"),
+                        sf.col("count").alias("MostCommonCount")
+    )
 
-  most_common = most_common.select(
-                      sf.col(""),
-                      sf.col(col_name).alias("MostCommon"),
-                      sf.col("count").alias("MostCommonCount")
-  )
-
-  return most_common
+    return most_common
 
 {% endhighlight %}
 
@@ -80,3 +81,5 @@ def find_most_common(df,col_name):
 |  2 |    Milk      | 3               |
 
 #### Highlight ####
+
+* Window functions
