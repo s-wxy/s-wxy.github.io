@@ -1,24 +1,30 @@
 ---
 layout: post
-title: PySpark Note - How to find the most common value in the given column
+title: PySpark Note - Find the most common value I
 date: 2020-05-05
 tags: [PySpark]
 ---
 
 #### Problems ####
-* How to find the most common value in the given column?
+* How to find the most common product each customer bought in the given table, as well as its count?
 
 ##### Sample Input #####
 
-| Id |       reviewTime      |
-|:--:|:---------------------:|
-|  1 | 11/22/2015 7:42:51 PM |
-|  2 |  1/23/2017 2:37:25 PM |
-|  3 |  3/17/2019 8:04:37 AM |
+| Id |  Product  | Date       |
+|:--:|:---------:| :---------:|
+|  1 |   Milk    | 11/22/2019 |
+|  1 |    Egg    | 11/22/2019 |
+|  1 |    Egg    | 11/27/2019 |
+|  2 |   Sugar   | 10/02/2019 |
+|  2 |   Milk    | 10/02/2019 |
+|  2 |   Milk    | 11/14/2019 |
+|  2 |   Milk    | 12/09/2019 |
 
 ***
 
-#### Framework ####
+#### Analysis ####
+
+Here we define a function for more generic use, as follows:  
 
 ##### Parameters #####
 * df : spark.DataFrame
@@ -28,46 +34,49 @@ tags: [PySpark]
 * most_common : spark.DataFrame
 
 Return frame with following columns
-* employerID
-* col_name+"MostCommon": most common value
-* col_name+"_maxCount": number of reviews mentioned the most common value
+* ID
+* MostCommon: most common value
+* MostCommonCount: number of reviews mentioned the most common value
+
+For the example problem, for each **Id**, we want to find its most common **Product**.
+So the **col_name = Product**. We can break down our question into steps:
+1. Select the corresponding columns from dataset
+2. Calculate the frequency of each value in the given column: (ID,product),count
+3. Using **windonw** function get the most common value (sort “count” in descending order and get the first row)
 
 ##### Solution #####
 
 {% highlight python %}
+from pyspark.sql import functions as sf
+from pyspark.sql import Window
 
-
-def find_most_common(self,df,col_name):
-  df1 = df.select(["employerID","reviewID",col_name])
-  frequency_count = (df1.groupby(["employerID",col_name]).count()
+def find_most_common(df,col_name):
+  df1 = df.select(["ID",col_name])
+  frequency_count = (df1.groupby(["ID",col_name]).count()
                        .where(sf.col(col_name).isNotNull())
   )
 
-  window = Window.partitionBy("employerID").orderBy(sf.desc("count"))
+  window = Window.partitionBy("ID").orderBy(sf.desc("count"))
   most_common = (frequency_count.withColumn("_rn",sf.row_number()
                       .over(window)).where(sf.col("_rn")==1).drop("_rn")
   )
 
   most_common = most_common.select(
-                      sf.col("employerID"),
-                      sf.col(col_name).alias(col_name+"MostCommon"),
-                      sf.col("count").alias(col_name+"_maxCount"))
+                      sf.col(""),
+                      sf.col(col_name).alias("MostCommon"),
+                      sf.col("count").alias("MostCommonCount")
+  )
 
   return most_common
 
 {% endhighlight %}
 
 
-
 #### Sample Output ####
 
-| Id |       reviewTime      | Year | Month | Day |
-|:--:|:---------------------:|:----:|:-----:|:---:|
-|  1 | 11/22/2015 7:42:51 PM | 2015 |   11  |  22 |
-|  2 |  1/23/2017 2:37:25 PM | 2017 |   1   |  23 |
-|  3 |  3/17/2019 8:04:37 AM | 2019 |   3   |  17 |
+| Id |  MostCommon  | MostCommonCount |
+|:--:|:------------:| :--------------:|
+|  1 |    Egg       | 2               |
+|  2 |    Milk      | 3               |
 
-Other functions:
-* pyspark.sql.functions.dayofweek()
-* pyspark.sql.functions.dayofyear
-* pyspark.sql.functions.weekofyear()
+#### Highlight ####
