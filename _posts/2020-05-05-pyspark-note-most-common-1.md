@@ -2,7 +2,7 @@
 layout: post
 title: PySpark Note - Find the most common value I
 date: 2020-05-05
-tags: [PySpark]
+tags: [PySpar,Work]
 ---
 
 #### Problems ####
@@ -38,6 +38,13 @@ Return frame with following columns
 * MostCommon: most common value
 * MostCommonCount: number of reviews mentioned the most common value
 
+#### Sample Output ####
+
+| Id |  MostCommon  | MostCommonCount |
+|:--:|:------------:| :--------------:|
+|  1 |    Egg       | 2               |
+|  2 |    Milk      | 3               |
+
 For the example problem, for each **Id**, we want to find its most common **Product**.
 So the **col_name = Product**. We can break down our question into steps:
 1. Select the corresponding columns from dataset
@@ -72,13 +79,6 @@ def find_most_common(df,col_name):
 
 {% endhighlight %}
 
-
-#### Sample Output ####
-
-| Id |  MostCommon  | MostCommonCount |
-|:--:|:------------:| :--------------:|
-|  1 |    Egg       | 2               |
-|  2 |    Milk      | 3               |
 
 #### Highlight ####
 

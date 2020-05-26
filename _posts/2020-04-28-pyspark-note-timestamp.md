@@ -2,7 +2,7 @@
 layout: post
 title: PySpark Note - Get null when convert StringType to TimestampType
 date: 2020-04-28
-tags: [PySpark]
+tags: [PySpark,Work]
 ---
 
 #### Problems ####
@@ -38,7 +38,15 @@ Few things we need to pay attention to when giving the format:
 * **S** for millisecond, **X** for timezone
 * Spark >= 2.2, use **to_timestamp**, otherwise use **unix_timestamp**
 
-##### Solution #####
+##### Sample Output #####
+
+| Id |       reviewTime      | Year | Month | Day |
+|:--:|:---------------------:|:----:|:-----:|:---:|
+|  1 | 11/22/2015 7:42:51 PM | 2015 |   11  |  22 |
+|  2 |  1/23/2017 2:37:25 PM | 2017 |   1   |  23 |
+|  3 |  3/17/2019 8:04:37 AM | 2019 |   3   |  17 |
+
+#### Solution ####
 
 {% highlight python %}
 from pyspark.sql import functions as sf
@@ -51,7 +59,7 @@ df1 = (df.withColumn("reviewTime_timestamp",
 
 ***
 
-### Year, Month, Day ###
+##### Year, Month, Day #####
 
 {% highlight python %}
 from pyspark.sql import functions as sf
@@ -63,15 +71,9 @@ df2 = df1.select("employerID",
 )
 {% endhighlight %}
 
-#### Sample Output ####
 
-| Id |       reviewTime      | Year | Month | Day |
-|:--:|:---------------------:|:----:|:-----:|:---:|
-|  1 | 11/22/2015 7:42:51 PM | 2015 |   11  |  22 |
-|  2 |  1/23/2017 2:37:25 PM | 2017 |   1   |  23 |
-|  3 |  3/17/2019 8:04:37 AM | 2019 |   3   |  17 |
+#### Other time related functions ####
 
-Other functions:
 * pyspark.sql.functions.dayofweek()
 * pyspark.sql.functions.dayofyear
 * pyspark.sql.functions.weekofyear()
