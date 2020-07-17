@@ -1,24 +1,24 @@
 ---
 layout: post
-title: PySpark Note - Find the most common value I
+title: PySpark Note - Find the most common value
 date: 2020-05-05
-tags: [PySpar,Work]
+tags: [PySpark]
 ---
 
 #### Problems ####
-* How to find the most common product each customer bought in the given table, as well as its count?
+* How to find the most common product of each customer bought in the given table, as well as its count?
 
 ##### Sample Input #####
 
-| Id |  Product  | Date       |
-|:--:|:---------:| :---------:|
-|  1 |   Milk    | 11/22/2019 |
-|  1 |    Egg    | 11/22/2019 |
-|  1 |    Egg    | 11/27/2019 |
-|  2 |   Sugar   | 10/02/2019 |
-|  2 |   Milk    | 10/02/2019 |
-|  2 |   Milk    | 11/14/2019 |
-|  2 |   Milk    | 12/09/2019 |
+| CustomerId |  Product  | Date       |
+|:----------:|:---------:| :---------:|
+|  1         |   Milk    | 11/22/2019 |
+|  1         |    Egg    | 11/22/2019 |
+|  1         |    Egg    | 11/27/2019 |
+|  2         |   Sugar   | 10/02/2019 |
+|  2         |   Milk    | 10/02/2019 |
+|  2         |   Milk    | 11/14/2019 |
+|  2         |   Milk    | 12/09/2019 |
 
 ***
 
@@ -34,21 +34,21 @@ Here we define a function for more generic use, as follows:
 * most_common : spark.DataFrame
 
 Return frame with following columns
-* ID
+* CustomerId
 * MostCommon: most common value
 * MostCommonCount: number of reviews mentioned the most common value
 
 #### Sample Output ####
 
-| Id |  MostCommon  | MostCommonCount |
-|:--:|:------------:| :--------------:|
-|  1 |    Egg       | 2               |
-|  2 |    Milk      | 3               |
+| CustomerId |  MostCommon  | MostCommonCount |
+|:----------:|:------------:| :--------------:|
+|  1         |    Egg       | 2               |
+|  2         |    Milk      | 3               |
 
-For the example problem, for each **Id**, we want to find its most common **Product**.
+For the example problem, for each **CustomerId**, we want to find its most common **Product**.
 So the **col_name = Product**. We can break down our question into steps:
 1. Select the corresponding columns from dataset
-2. Calculate the frequency of each value in the given column: (ID,product),count
+2. Calculate the frequency of each value in the given column: (CustomerID,product),count
 3. Using **Window** functions get the most common value (sort “count” in descending order and get the first row)
 
 ##### Solution #####

@@ -1,8 +1,8 @@
 ---
 layout: post
 title: PySpark Note - Get null when convert StringType to TimestampType
-date: 2020-04-28
-tags: [PySpark,Work]
+date: 2020-06-23
+tags: [PySpark]
 ---
 
 #### Problems ####
