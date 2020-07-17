@@ -6,7 +6,7 @@ image: images/13.jpg
 ---
 
 Hi, this is Serene.
-I wrote these memos to remind myself those enjoyable experience, the lessons I learned from work and from life.
+I wrote these memos to remind myself the enjoyable experience I had, the lessons I learned from work and from life.
 Wish you found something interesting :)
 
 
