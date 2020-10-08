@@ -83,3 +83,8 @@ def find_most_common(df,col_name):
 #### Highlight ####
 
 * Window functions
+
+<br />
+<br />
+<br />
+<br />

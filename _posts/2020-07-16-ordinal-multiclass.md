@@ -29,3 +29,8 @@ Ordinal regression turns up often in the social sciences, for example in the mod
 
 
 Multiclass or multinomial classification is the problem of classifying instances into one of three or more classes (classifying instances into one of two classes is called binary classification).
+
+<br />
+<br />
+<br />
+<br />
